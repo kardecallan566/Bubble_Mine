@@ -6,28 +6,28 @@ Project to fix my learning with react
 
 ### 1. Home Page:
 
-* []  a. Two grades for the Mobs and Itens;
-* []  b. Search bar, the user searc for the mobs or the itens using code, name;
-* []  c. button more items or mobs;
+* [ ]  a. Two grades for the Mobs and Itens;
+* [ ]  b. Search bar, the user searc for the mobs or the itens using code, name;
+* [ ]  c. button more items or mobs;
 
 
 ### 2. Items Page:
 
-* []  a. List fomating grid the all items and you images;
-* []  b. Pagination, give up 10 itens or more;
-* []  c. Order by name,id;
-* []  d. Filtros:....;
+* [ ]  a. List fomating grid the all items and you images;
+* [ ]  b. Pagination, give up 10 itens or more;
+* [ ]  c. Order by name,id;
+* [ ]  d. Filtros:....;
 
 ### 3. Mobs Page:
 
-* []  a. List fomating grid the all mobs and you images;
-* []  b. Pagination, give up 10 itens or more;
-* []  c. Order by name,id;
-* []  d. Filtros:....;
+* [ ]  a. List fomating grid the all mobs and you images;
+* [ ]  b. Pagination, give up 10 itens or more;
+* [ ]  c. Order by name,id;
+* [ ]  d. Filtros:....;
 
 ### 4. itens/mobs page individuals:
 
-* []  a. list the all information for the item or mob
+* [ ]  a. list the all information for the item or mob
 
 ### 5. General consideration:
 
