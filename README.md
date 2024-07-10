@@ -1,5 +1,5 @@
 # Bubble_Mine
-Project to fix my learning with react
+Project to improve my learning with react
 
 
 ## Functios
