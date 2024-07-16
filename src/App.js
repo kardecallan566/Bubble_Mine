@@ -1,25 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
+import axios from 'axios';
+import HomePage from './components/Home.jsx';
+import WikiPage from './components/PageItem.jsx';
+import Searchbar from "./components/Searchbar.jsx";
+import Root from "./routers/Root.tsx";
 
-function App() {
+const App = () => {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const fetchItems = async () => {
+      try {
+        const response = await axios.get('https://minecraft-ids.grahamedgecombe.com/items.json');
+        setItems(response.data);
+      } catch (error) {
+        console.error('Error fetching items:', error);
+      }
+    };
+
+    fetchItems();
+  }, []);
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Root />,
+      children: [
+        {
+          path: "/",
+          element: <Navigate to={"/home"} replace />
+        },
+        {
+          path: "home",
+          element: <HomePage />
+        },
+        {
+          path: "search",
+          element: <Searchbar items={items} />
+        },
+        ...items.map((item) => ({
+          path: `/${item.name?.toLowerCase()}`,
+          element: <WikiPage item={item.name} />
+        }))
+      ]
+    },
+  ]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <RouterProvider router={router} />
   );
-}
+};
 
 export default App;

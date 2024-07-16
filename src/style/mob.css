@@ -1,0 +1,42 @@
+.wiki-page {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  .wiki-content {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .wiki-content p {
+    margin: 10px 0;
+  }
+  
+  .wiki-content h2, .wiki-content h3, .wiki-content h4 {
+    margin-top: 20px;
+  }
+  
+  .wiki-content ul, .wiki-content ol {
+    margin: 10px 0 20px 20px;
+  }
+  
+  .wiki-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  .wiki-content table, .wiki-content th, .wiki-content td {
+    border: 1px solid #ddd;
+  }
+  
+  .wiki-content th, .wiki-content td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .wiki-content th {
+    background-color: #f2f2f2;
+  }
+  

@@ -2,6 +2,13 @@
 Project to fix my learning with react
 
 
+
+## APIs
+https://minecraft-ids.grahamedgecombe.com/items.json # todos os itens
+https://mcapi.marveldc.me/item/dirt?version=1.20&width=200&height=200 # pegar imagem
+https://pt.minecraft.wiki/api.php?action=query&format=json&prop=revisions&contentformat=html
+
+
 ## Functios
 
 ### 1. Home Page:
