@@ -1,27 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
-import axios from 'axios';
 import HomePage from './components/Home.jsx';
 import WikiPage from './components/PageItem.jsx';
-import Searchbar from "./components/Searchbar.jsx";
+import Search from "./components/Searchbar.jsx";
+import SearchResultsPage from './components/SearchResultsPage.jsx'; 
 import Root from "./routers/Root.tsx";
 
 const App = () => {
-  const [items, setItems] = useState([]);
-
-  useEffect(() => {
-    const fetchItems = async () => {
-      try {
-        const response = await axios.get('https://minecraft-ids.grahamedgecombe.com/items.json');
-        setItems(response.data);
-      } catch (error) {
-        console.error('Error fetching items:', error);
-      }
-    };
-
-    fetchItems();
-  }, []);
-
   const router = createBrowserRouter([
     {
       path: "/",
@@ -36,13 +21,17 @@ const App = () => {
           element: <HomePage />
         },
         {
-          path: "search",
-          element: <Searchbar items={items} />
+          path: "search/",
+          element: <Search />
         },
-        ...items.map((item) => ({
-          path: `/${item.name?.toLowerCase()}`,
-          element: <WikiPage item={item.name} />
-        }))
+        {
+          path: "item/:itemName",
+          element: <WikiPage />
+        },
+        {
+          path: "search/:query",
+          element: <SearchResultsPage />
+        }
       ]
     },
   ]);

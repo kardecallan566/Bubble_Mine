@@ -9,7 +9,7 @@ const HomePage = () => {
             <nav>
                 <ul>
                     <li>
-                        <Link to="/esmerald">Página da Esmeralda</Link>
+                        <Link to="/Esmeralda">Página da Esmeralda</Link>
                     </li>
                 </ul>
             </nav>
